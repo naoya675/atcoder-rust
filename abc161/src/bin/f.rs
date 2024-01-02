@@ -5,15 +5,15 @@ fn main() {
         n: i64
     }
     let mut pattern = divisors(n - 1).len() - 1;
-    for i in divisors(n) {
-        if i == 1 {
+    for d in divisors(n) {
+        if d == 1 {
             continue;
         }
         let mut n = n;
-        while n % i == 0 {
-            n /= i;
+        while n % d == 0 {
+            n /= d;
         }
-        if n % i == 1 {
+        if n % d == 1 {
             pattern += 1;
         }
     }
