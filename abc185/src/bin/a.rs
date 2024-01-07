@@ -1,5 +1,8 @@
 use proconio::input;
 
 fn main() {
-    todo!();
+    input! {
+        a: [i32; 4]
+    }
+    println!("{}", a.iter().min().unwrap());
 }
